@@ -9,3 +9,11 @@ const greeting = () => {
 };
 
 export default greeting;
+
+export const win = () => {
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export const fail = () => {
+  console.log(`Let's try again, ${userName}!`);
+};
