@@ -30,3 +30,13 @@ export const getOperationResult = (firstOperand, operator, secondOperand) => {
       return null;
   }
 };
+
+export const getGcd = (firstNumber, secondNumber) => {
+  const maxNumber = Math.max(firstNumber, secondNumber);
+  for (let i = maxNumber; i > 1; i -= 1) {
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+      return i;
+    }
+  }
+  return 1;
+};
