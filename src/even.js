@@ -1,24 +1,23 @@
-import readlineSync from 'readline-sync';
-import { win, fail } from './cli.js';
+import {
+  win, fail, correct, questionAndInput,
+} from './cli.js';
+import { isEven, roundsCount } from './index.js';
 
 const evenGame = () => {
-  const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
-
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  const rounds = 3;
-  for (let i = 0; i < rounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = Math.round(Math.random() * 100);
-    const userInput = readlineSync
-      .question(`Question: ${randomNumber}\nYour answer: `)
-      .toLowerCase();
+    const userInput = questionAndInput(randomNumber).toLowerCase();
+    const answer = isEven(randomNumber);
 
-    if (userInput !== isEven(randomNumber)) {
-      console.log(`${userInput} is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.`);
-      return fail();
+    if (userInput === answer) {
+      correct();
+    } else {
+      return fail(userInput, answer);
     }
-    console.log('Correct!');
   }
+
   return win();
 };
 

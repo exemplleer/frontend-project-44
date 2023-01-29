@@ -10,10 +10,17 @@ const greeting = () => {
 
 export default greeting;
 
+export const questionAndInput = (ask) => readlineSync.question(`Question: ${ask}\nYour answer: `);
+
 export const win = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export const fail = () => {
+export const fail = (current, correct) => {
+  console.log(`'${current}' is wrong answer ;(. Correct answer was '${correct}'.`);
   console.log(`Let's try again, ${userName}!`);
+};
+
+export const correct = () => {
+  console.log('Correct!');
 };
