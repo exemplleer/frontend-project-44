@@ -36,8 +36,8 @@ const calcGame = () => {
     const firstNumber = getRandomNumber();
     const secondNumber = getRandomNumber();
     const operator = getRandomOperator();
-    const answer = getOperationResult(firstNumber, operator, secondNumber);
 
+    const answer = getOperationResult(firstNumber, operator, secondNumber);
     const userInput = questionAndInput(`${firstNumber} ${operator} ${secondNumber}`);
 
     if (Number(userInput) === answer) {

@@ -25,8 +25,8 @@ const gcdGame = () => {
       secondNumber += 1;
     }
 
-    const userInput = questionAndInput(`${firstNumber} ${secondNumber}`);
     const answer = getGcd(firstNumber, secondNumber);
+    const userInput = questionAndInput(`${firstNumber} ${secondNumber}`);
 
     if (Number(userInput) === answer) {
       correct();
