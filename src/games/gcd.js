@@ -1,7 +1,16 @@
 import {
-  win, fail, correct, questionAndInput,
-} from '../cli.js';
-import { roundsCount, getRandomNumber, getGcd } from '../index.js';
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+} from '../index.js';
+
+export const getGcd = (firstNumber, secondNumber) => {
+  const maxNumber = Math.max(firstNumber, secondNumber);
+  for (let i = maxNumber; i > 1; i -= 1) {
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+      return i;
+    }
+  }
+  return 1;
+};
 
 const gcdGame = () => {
   console.log('Find the greatest common divisor of given numbers.');

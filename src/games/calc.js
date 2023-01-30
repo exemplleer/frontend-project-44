@@ -1,9 +1,33 @@
 import {
-  win, fail, correct, questionAndInput,
-} from '../cli.js';
-import {
-  roundsCount, getRandomNumber, getRandomOperator, getOperationResult,
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
 } from '../index.js';
+
+const getRandomOperator = () => {
+  const randomNumber = (Math.round(Math.random() * 10) % 3) + 1;
+  switch (randomNumber) {
+    case 1:
+      return '+';
+    case 2:
+      return '-';
+    case 3:
+      return '*';
+    default:
+      return null;
+  }
+};
+
+const getOperationResult = (firstOperand, operator, secondOperand) => {
+  switch (operator) {
+    case '+':
+      return firstOperand + secondOperand;
+    case '-':
+      return firstOperand - secondOperand;
+    case '*':
+      return firstOperand * secondOperand;
+    default:
+      return null;
+  }
+};
 
 const calcGame = () => {
   console.log('What is the result of the expression?');

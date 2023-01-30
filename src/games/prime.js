@@ -1,8 +1,6 @@
 import {
-  win, fail, correct, questionAndInput,
-} from '../cli.js';
-
-import { getRandomNumber, roundsCount } from '../index.js';
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+} from '../index.js';
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {

@@ -1,7 +1,6 @@
 import {
-  win, fail, correct, questionAndInput,
-} from '../cli.js';
-import { getRandomNumber, roundsCount } from '../index.js';
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+} from '../index.js';
 
 const progressionGame = () => {
   console.log('What number is missing in the progression?');
