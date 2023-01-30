@@ -1,9 +1,9 @@
 import {
   win, fail, correct, questionAndInput,
-} from './cli.js';
+} from '../cli.js';
 import {
   roundsCount, getRandomNumber, getRandomOperator, getOperationResult,
-} from './index.js';
+} from '../index.js';
 
 const calcGame = () => {
   console.log('What is the result of the expression?');

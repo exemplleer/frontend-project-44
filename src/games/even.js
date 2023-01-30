@@ -1,7 +1,7 @@
 import {
   win, fail, correct, questionAndInput,
-} from './cli.js';
-import { isEven, roundsCount } from './index.js';
+} from '../cli.js';
+import { isEven, roundsCount } from '../index.js';
 
 const evenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');

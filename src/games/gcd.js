@@ -1,7 +1,7 @@
 import {
   win, fail, correct, questionAndInput,
-} from './cli.js';
-import { roundsCount, getRandomNumber, getGcd } from './index.js';
+} from '../cli.js';
+import { roundsCount, getRandomNumber, getGcd } from '../index.js';
 
 const gcdGame = () => {
   console.log('Find the greatest common divisor of given numbers.');
