@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, questionAndInput, roundsCount, win, fail, correct, checkAnswer,
+  getRandomNumber, questionAndInput, roundsCount, checkAnswer, win, fail,
 } from '../index.js';
 
 const progressionGame = () => {

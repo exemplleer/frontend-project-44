@@ -11,7 +11,7 @@ const isPrime = (num) => {
 
 const primeGame = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  judgmentCorrect(isPrime, roundsCount)
+  judgmentCorrect(isPrime, roundsCount);
 };
 
 export default primeGame;

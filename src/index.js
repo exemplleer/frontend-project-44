@@ -25,11 +25,11 @@ export const checkAnswer = (currentAnswer, correctAnswer) => {
     return correct();
   }
   return false;
-}
+};
 
 export const judgmentCorrect = (checkFunction, repeat = 1) => {
   for (let i = 0; i < repeat; i += 1) {
-    const randomNumber = getRandomNumber()
+    const randomNumber = getRandomNumber();
     const answer = checkFunction(randomNumber);
     const userInput = questionAndInput(randomNumber);
 
@@ -38,4 +38,4 @@ export const judgmentCorrect = (checkFunction, repeat = 1) => {
     }
   }
   return win();
-}
+};

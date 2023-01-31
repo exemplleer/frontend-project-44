@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, questionAndInput, roundsCount, win, checkAnswer, correct, fail,
+  getRandomNumber, questionAndInput, roundsCount, checkAnswer, win, fail,
 } from '../index.js';
 
 const getRandomOperator = () => {
