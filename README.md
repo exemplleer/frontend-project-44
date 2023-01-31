@@ -14,6 +14,7 @@ This repository contains a collection of math and logic task:
 
 ### Setup
 `sudo apt install make`
+
 `make install`
 
 ### Start game
