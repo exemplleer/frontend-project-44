@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct, checkAnswer,
 } from '../index.js';
 
 export const getGcd = (firstNumber, secondNumber) => {
@@ -28,9 +28,7 @@ const gcdGame = () => {
     const answer = getGcd(firstNumber, secondNumber);
     const userInput = questionAndInput(`${firstNumber} ${secondNumber}`);
 
-    if (Number(userInput) === answer) {
-      correct();
-    } else {
+    if (checkAnswer(Number(userInput), answer) === false) {
       return fail(userInput, answer);
     }
   }

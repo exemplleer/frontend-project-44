@@ -19,3 +19,23 @@ export const fail = (current, correct) => {
 export const correct = () => {
   console.log('Correct!');
 };
+
+export const checkAnswer = (currentAnswer, correctAnswer) => {
+  if (currentAnswer === correctAnswer) {
+    return correct();
+  }
+  return false;
+}
+
+export const judgmentCorrect = (checkFunction, repeat = 1) => {
+  for (let i = 0; i < repeat; i += 1) {
+    const randomNumber = getRandomNumber()
+    const answer = checkFunction(randomNumber);
+    const userInput = questionAndInput(randomNumber);
+
+    if (checkAnswer(userInput, answer) === false) {
+      return fail(userInput, answer);
+    }
+  }
+  return win();
+}

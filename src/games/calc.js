@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+  getRandomNumber, questionAndInput, roundsCount, win, checkAnswer, correct, fail,
 } from '../index.js';
 
 const getRandomOperator = () => {
@@ -40,9 +40,7 @@ const calcGame = () => {
     const answer = getOperationResult(firstNumber, operator, secondNumber);
     const userInput = questionAndInput(`${firstNumber} ${operator} ${secondNumber}`);
 
-    if (Number(userInput) === answer) {
-      correct();
-    } else {
+    if (checkAnswer(Number(userInput), answer) === false) {
       return fail(userInput, answer);
     }
   }

@@ -1,5 +1,5 @@
 import {
-  getRandomNumber, questionAndInput, roundsCount, win, fail, correct,
+  getRandomNumber, questionAndInput, roundsCount, win, fail, correct, checkAnswer,
 } from '../index.js';
 
 const progressionGame = () => {
@@ -23,9 +23,7 @@ const progressionGame = () => {
 
     const userInput = questionAndInput(progression.join(' '));
 
-    if (Number(userInput) === answer) {
-      correct();
-    } else {
+    if (checkAnswer(Number(userInput), answer) === false) {
       return fail(userInput, answer);
     }
   }
