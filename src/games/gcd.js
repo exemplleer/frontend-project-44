@@ -16,14 +16,8 @@ const gcdGame = () => {
   console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 0; i < roundsCount; i += 1) {
-    let firstNumber = getRandomNumber();
-    let secondNumber = getRandomNumber();
-
-    if (firstNumber === 0) {
-      firstNumber += 1;
-    } else if (secondNumber === 0) {
-      secondNumber += 1;
-    }
+    const firstNumber = getRandomNumber(1, 100);
+    const secondNumber = getRandomNumber(1, 100);
 
     const answer = getGcd(firstNumber, secondNumber);
     const userInput = questionAndInput(`${firstNumber} ${secondNumber}`);

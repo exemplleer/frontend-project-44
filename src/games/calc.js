@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 
 const getRandomOperator = () => {
-  const randomNumber = (Math.round(Math.random() * 10) % 3) + 1;
+  const randomNumber = getRandomNumber(1, 3);
   switch (randomNumber) {
     case 1:
       return '+';

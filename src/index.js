@@ -29,7 +29,7 @@ export const checkAnswer = (currentAnswer, correctAnswer) => {
 
 export const judgmentCorrect = (checkFunction, repeat = 1) => {
   for (let i = 0; i < repeat; i += 1) {
-    const randomNumber = getRandomNumber();
+    const randomNumber = getRandomNumber(1, 100);
     const answer = checkFunction(randomNumber);
     const userInput = questionAndInput(randomNumber);
 

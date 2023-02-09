@@ -8,8 +8,8 @@ const progressionGame = () => {
 
   for (let i = 0; i < roundsCount; i += 1) {
     const startPoint = getRandomNumber();
-    const progressionStep = Math.round(Math.random() * 8) + 2;
-    const hiddenIndex = Math.round(Math.random() * (progressionLength - 1));
+    const progressionStep = getRandomNumber(2, 10);
+    const hiddenIndex = getRandomNumber(0, progressionLength - 1);
 
     const progression = [startPoint];
     let entryPoint = startPoint;
