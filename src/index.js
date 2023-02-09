@@ -3,7 +3,7 @@ import { user } from './cli.js';
 
 export const roundsCount = 3;
 
-export const getRandomNumber = () => Math.round(Math.random() * 100);
+export const getRandomNumber = (min = 0, max = 100) => Math.floor(Math.random() * max) + min;
 
 export const questionAndInput = (ask) => readlineSync.question(`Question: ${ask}\nYour answer: `);
 
