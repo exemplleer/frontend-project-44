@@ -21,7 +21,7 @@ This repository contains a collection of math and logic task:
 1. `make install`
 
 ## Start the game
-- `make <name of the game>` `// for example: make brain-even`
+- `make <name of the game>` `# for example: make brain-even`
 
 ## Guide to installing and starting the game
-[![asciicast](https://asciinema.org/a/555875.svg)](https://asciinema.org/a/555875)
+[![asciicast](https://asciinema.org/a/562464.svg)](https://asciinema.org/a/562464)
